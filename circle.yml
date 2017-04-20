@@ -1,3 +1,17 @@
 machine:
   xcode:
     version: 8.2
+
+deployment:
+  beta_distribution:
+    branch: master
+    commands:
+      - gym
+      - ipa distribute:hockeyapp
+          --file             /Users/distiller/<yourprojectname>/<yourappname>.ipa
+          --token            "$HOCKEY_APP_TOKEN"
+          --notes            "CircleCI build $CIRCLE_BUILD_NUM"
+          --commit-sha       "$CIRCLE_SHA1"
+          --build-server-url "$CIRCLE_BUILD_URL"
+          --repository-url   "$CIRCLE_REPOSITORY_URL"
+
