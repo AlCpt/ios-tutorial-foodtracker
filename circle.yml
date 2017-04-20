@@ -1,8 +1,6 @@
 machine:
   xcode:
     version: 8.2
-
-machine:
   environment:
     GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Comptoirs du Multimedia Developpement (355B4T7PU8)"
 
