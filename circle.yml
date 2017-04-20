@@ -8,7 +8,7 @@ deployment:
   beta_distribution:
     branch: master
     commands:
-      - gym
+      - fastlane gym
       - ipa distribute:hockeyapp
           --file             /Users/distiller/<yourprojectname>/<yourappname>.ipa
           --token            "$HOCKEY_APP_TOKEN"
